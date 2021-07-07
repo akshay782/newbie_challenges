@@ -1,0 +1,135 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5.5rem 1.5rem;
+  background-color: $card_bg;
+  border-radius: 0.9375rem;
+
+  .card_img {
+    border-radius: 0.9375rem;
+    margin-bottom: 45px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $accent;
+      opacity: 0.7;
+      border-radius: 0.9375rem 0.9375rem 0 0;
+    }
+    .mob {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.9375rem 0.9375rem 0 0;
+    }
+    .desk {
+      display: none;
+    }
+  }
+
+  .card_content {
+    .card_heading {
+      color: $head;
+      text-align: center;
+      margin: 0 2.1875rem 1.5625rem 2.1875rem;
+      line-height: 1.3;
+
+      span {
+        color: $accent;
+      }
+    }
+
+    .card_para {
+      text-align: center;
+      color: $main_para;
+      margin: 0 2.1875rem 0 2.1875rem;
+      line-height: 1.8;
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.5rem;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:last-child {
+          margin-bottom: 2.1875rem;
+        }
+        .no {
+          margin: 0.9375rem 0 0.9375rem 0;
+          color: $head;
+          text-transform: uppercase;
+        }
+        #lc {
+          text-transform: lowercase;
+        }
+        .name {
+          color: $stats;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 640px) {
+  .flex {
+    // min-width: 100%;
+    height: 27.875rem;
+    flex-direction: row-reverse;
+    margin: 10.9375rem 10.3125rem;
+    .card_img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      &::before {
+        border-radius: 0 0.9375rem 0.9375rem 0;
+      }
+      .mob {
+        display: none;
+      }
+      .desk {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0.9375rem 0.9375rem 0;
+      }
+    }
+
+    .card_content {
+      padding: 0 0 4.0625rem 4.0625rem;
+      .card_heading {
+        margin: 4.875rem 0 2rem 0;
+        text-align: left;
+        width: 80%;
+      }
+      .card_para {
+        text-align: left;
+        margin: 0 0 4.75rem 0;
+        width: 80%;
+      }
+      .stats {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        .item {
+          margin-right: 3.875rem;
+          align-items: flex-start;
+          &:last-child {
+            margin: 0;
+          }
+          .no {
+            margin: 0 0 0.9375rem 0;
+          }
+        }
+      }
+    }
+  }
+}
