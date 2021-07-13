@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.125rem;
+  margin-bottom: 2.1875rem;
+  &_one,
+  &_two,
+  &_para {
+    text-align: center;
+  }
+  &_one {
+    color: $grayishblue;
+    font-weight: $regular;
+    margin-bottom: 0.5rem;
+  }
+  &_two {
+    margin-bottom: 0.625rem;
+    color: $verydarkblue;
+  }
+  &_para {
+    width: 70%;
+    color: $grayishblue;
+    margin-bottom: 2.5rem;
+  }
+}
